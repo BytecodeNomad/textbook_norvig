@@ -3,6 +3,7 @@ from collections import deque
 
 maze = turn_to_list_maze("maze.txt")
 
+
 class Node:
     def __init__(self, row, col, parent):
         self.row = row
@@ -78,6 +79,7 @@ def bfs(initial_node, goal_node):
             if is_goal(child, goal_node):
                 return child
 
+
 def make_path(initial_node, success):
     maze[success.row][success.col] = "%"
 
@@ -85,6 +87,7 @@ def make_path(initial_node, success):
         maze[success.parent.row][success.parent.col] = "%"
         success = success.parent
     maze[initial_node.row][initial_node.col] = "%"
+
 
 initial = Node(0, 0, None)
 goal = Node(20, 19, None)
