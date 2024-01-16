@@ -1,3 +1,4 @@
+# TO DO: remove those *
 from mazify import turn_to_list_maze
 from collections import deque
 
@@ -9,9 +10,6 @@ class Node:
         self.row = row
         self.col = col
         self.parent = parent
-
-    def get_parent(self):
-        return self.parent
 
 
 frontier = deque()
